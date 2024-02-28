@@ -1,3 +1,43 @@
+/*Код писал старый больной шакал. Sorry :(*/
+
+@media screen and (max-width: 1050px) {
+    #art45 {
+        padding: 0 0 !important;
+    }
+    .Header > div > h4::before {
+        content: "SUPER "
+    }
+}
+
+@media screen and (max-width: 1500px)  {
+    #space {
+        display: none;
+    }
+    #pic3 {
+        display: none;
+    }
+    #IMGt23 {
+        align-content: flex-start !important;
+    }
+    .Header > div > h4 {
+        animation: pulse 2s infinite;
+        visibility: visible !important;
+    }
+
+}
+
+@keyframes pulse {
+    from {
+        opacity: 0;
+    }
+    50% {
+        opacity: 100%;
+    }
+    to {
+        opacity: 0;
+    }
+}
+
 @font-face {
     font-family: 'Monserrat';
     src: url(https://fonts.googleapis.com/css2?family=Montserrat&display=swap);
@@ -6,7 +46,7 @@
 body {
     font-family: Monserrat, sans-serif;
     margin: 0;
-    overflow-x:hidden;
+    overflow-x: hidden;
 }
 
 h1 {
@@ -29,32 +69,50 @@ ul {
     list-style-type: "❄️ ";
 }
 
-.Footer {
+.Header {
     margin-left: 25px;
     display: flex;
     flex-direction: row;
     align-items: flex-end;
 }
-.Footer h3 {
+
+.Header h3 {
     color: black;
     font-size: xx-large;
     margin: 0 5% 0 0;
 }
-.Footer h4 {
+
+.Header > h4 {
     color: #0080C4;
     font-size: x-large;
     padding: 0 10px;
 }
 
-.Footer img {
-    width: 150px;
-    margin-left: 50%;
+.Header > div {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+.Header > div > h4 {
+    margin-left: 5%;
+    visibility: hidden;
+    color: #f64a4a;
+    font-size: x-large;
+}
+
+.Header > div > img {
+
+    height: 40px;
+    margin-right: 5%;
 }
 
 #date {
     color: white;
     background-color: #0080C4;
 }
+
 #main {
     display: flex;
     flex-wrap: wrap;
@@ -64,34 +122,34 @@ ul {
     margin: 0 25px 25px 25px;
     border-bottom: #0080C4 5px solid;
     border-top: #0080C4 5px solid;
-
 }
+
 #art1 {
     background-color: aqua;
     flex: 0 0 40%;
     padding: 10px 20px;
 }
-#art1 > div{
+
+#art1 > div {
     width: 100%;
     height: 100%;
 }
 
-#title{
+#title {
     background-color: white;
     margin: -10px -20px 0 -20px;
     padding: 15px 10px;
     font-size: x-large;
     width: 110%;
-    color:red;
+    color: red;
 }
 
-#art1 p{
+#art1 p {
     padding: 0;
     margin: 0;
 }
 
-#circle{
-
+#circle {
     margin: 25px -10% 10px 10px;
     float: right;
     width: 50%;
@@ -101,13 +159,14 @@ ul {
 }
 
 #art2 {
-    flex: 0 0 50%;
+    flex: 0 0 48%;
     padding: 10px 20px;
 }
 
-#art2 h4{
+#art2 h4 {
     padding: 20px 20px;
 }
+
 #article2 {
     display: flex;
     flex-direction: row;
@@ -117,7 +176,8 @@ ul {
 #article2 > div {
     flex: 0 0 48%;
 }
-#art2_text p{
+
+#art2_text p {
     margin: 0;
 }
 
@@ -133,6 +193,7 @@ ul {
     z-index: 1;
     margin: 30px 0 0 0;
 }
+
 #pic2 {
     width: 100%;
     z-index: 1;
@@ -166,26 +227,32 @@ ul {
     z-index: 0;
     width: 350px;
 }
+
 #art3 ul {
     margin: 0 0 1em 0;
 }
-#tree > img{
+
+#tree > img {
     position: relative;
     width: 30%;
     float: right;
     z-index: 10;
 }
+
 #trees {
     padding: 10px;
 }
-#trees > img{
+
+#trees > img {
     width: 100%
 }
+
 #art3 h4:nth-last-child(2) {
     color: red;
 }
+
 #art45 {
-    flex: 0 0 50%;
+    flex: 0 0 48%;
     display: flex;
     flex-direction: column;
     row-gap: 25px;
@@ -208,8 +275,9 @@ ul {
     align-content: space-between;
     justify-content: space-between;
     padding: 20px 0;
-
+    flex: 0 0 60%;
 }
+
 .image > img {
     width: 100%;
 }
@@ -225,6 +293,7 @@ ul {
     column-gap: 4%;
     padding: 10px;
 }
+
 #t23 > p {
     margin: 0;
 }
@@ -233,13 +302,16 @@ ul {
     flex: 0 0 30%;
     padding: 10px;
 }
+
 #t1 > p {
     text-indent: 1.5em;
 }
+
 #t2 {
     padding: 10px;
     flex: 0 0 40%;
 }
+
 #t3 {
     padding: 10px;
     flex: 0 0 40%;
@@ -251,18 +323,20 @@ ul {
     column-count: 2;
     column-gap: 4%;
 }
+
 #art5 > p:last-child {
     text-align: right;
     font-weight: bold;
 }
+
 #art5 p {
     margin: 0;
 }
 
 #art5 h4 {
-    color:blue;
+    color: blue;
 }
 
-#art5 > h4{
+#art5 > h4 {
     color: black;
 }
