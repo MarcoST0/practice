@@ -1,0 +1,221 @@
+* {
+    margin:0;
+    padding: 0;
+}
+
+@font-face {
+    font-family: 'Monserrat';
+    src: url(https://fonts.googleapis.com/css2?family=Montserrat&display=swap);
+}
+
+body {
+    font-family: Monserrat, sans-serif;
+    /*text-align: center;*/
+    max-width: 100%;
+    /*overflow-x: hidden;*/
+}
+.main {
+    position: relative;
+    margin: 2% auto 2% auto;
+    height: 297mm;
+    width: 210mm;
+    border: gray solid 5px;
+}
+
+.background {
+    opacity: 0;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    animation: slide-left 5s 1s forwards;
+    width: 100%;
+    height: 100%;
+    background-color: #4DA865;
+}
+
+.row1 {
+    width: 100%;
+    height: 25%;
+    display: flex;
+    flex-direction: column;
+    border-bottom: black solid 5px;
+}
+
+.row1 > div {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    flex: 0 0 50%;
+    justify-content: space-between;
+    margin-left: 10px;
+}
+
+.row1 > div > div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#row1-1 > h1 {
+    color: yellow;
+    font-size: 800%;
+    font-weight: 600;
+    line-height: 1;
+
+}
+
+#row1-1, #row1-2 {
+    flex: 0 0 50%;
+    height: 50%;
+}
+#row1-1 > div {
+    color: white;
+    align-items: center;
+    justify-content: flex-end;
+    padding-bottom: 20px;
+}
+
+#row1-2 > h1 {
+    margin-bottom: -10px;
+    color: white;
+    font-size: 800%;
+    font-weight: 800;
+    line-height: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+#logos {
+    display: flex;
+    flex-direction: column;
+    margin-right: 5%;
+}
+
+#toloka {
+    height: auto;
+    width: 25px;
+}
+
+#plus16 {
+    width: 25px;
+    height: auto;
+}
+
+.row2 {
+    opacity: 0;
+    width: 100%;
+    height: 50%;
+    display: flex;
+    background-color: white;
+    border-top: solid darkgray 10px;
+    animation: slide-right 5s 6s forwards;
+}
+
+.cans-box {
+    position: relative;
+}
+
+.cans {
+    opacity: 0;
+    z-index: 9;
+    height: 100%;
+    animation: slide-left 5s 11s forwards;
+}
+
+.cans-box > p {
+    opacity: 0;
+    font-weight: bold;
+    color: white;
+    text-shadow: 1px 1px red, -1px -1px red, -1px 1px red, 1px -1px red, 6px 6px 10px #000000;
+    font-size: xxx-large;
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    top: 65%;
+    animation: slide-up 5s 16s forwards;
+}
+.row3 {
+    width: 100%;
+    height: 25%;
+}
+
+.column1 {
+    display: flex;
+    flex-direction: column;
+}
+
+.column1 p {
+    margin: 0 10px;
+    opacity: 0;
+    animation: slide-right 5s 26s forwards;
+}
+
+.column1 p:nth-of-type(odd) {
+    font-weight: bold;
+}
+
+.column1 p:nth-of-type(even) {
+    margin: 3px 10px;
+}
+
+.flowers {
+    opacity: 0;
+    z-index: 10;
+    width: 90%;
+    margin-left: 10px;
+    animation: slide-right 5s 21s forwards;
+}
+
+.arrow {
+    opacity: 0;
+    z-index: 10;
+    width: 105%;
+    margin-bottom: 2px;
+    animation: slide-right 5s 31s forwards;
+}
+
+@keyframes slide-left {
+    from {
+        opacity: 60%;
+        transform: translateX(300%);
+    }
+    to {
+        opacity: 100%;
+        transform: translateX(0%);
+    }
+}
+
+@keyframes slide-right {
+    from {
+        opacity: 60%;
+        transform: translateX(-300%);
+    }
+    to {
+        opacity: 100%;
+        transform: translateX(0);
+    }
+}
+
+@keyframes slide-down {
+    from {
+        opacity: 60%;
+        transform: translateY(-300%);
+    }
+    to {
+        opacity: 100%;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slide-up {
+    from {
+        opacity: 60%;
+        transform: translateY(300%);
+    }
+    to {
+        opacity: 100%;
+        transform: translateY(0);
+    }
+}
